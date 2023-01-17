@@ -1,2 +1,2 @@
-# blackjack-sathvik
-new repository
+# blackjack-game-template
+Base template for the Black Jack game
