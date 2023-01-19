@@ -10,6 +10,13 @@
     const packObj = {}
 
     // write your code here
+    for(let suit in suits)
+    {
+        for(let value in values)
+        {
+            packArr.push('${values[value]} of ${suits[suit]'});
+        }
+    }
 
 
     if(!asArray){
