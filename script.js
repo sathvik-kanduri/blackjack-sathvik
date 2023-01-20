@@ -42,7 +42,7 @@ class Deck {
      */
     reset() {
         // write your code here
-
+        return this.reset=buildCards();
     } //End of reset()
 
 
@@ -51,7 +51,16 @@ class Deck {
      */
     shuffle() {
         // write your code here
-        
+        const { deck } = this;
+        let m = deck.length, i;
+
+        while(m){
+        i = Math.floor(Math.random() * m--);
+
+        [deck[m], deck[i]] = [deck[i], deck[m]];
+        }
+
+       return this;
     } //End of shuffle()
 
     /**
@@ -60,7 +69,7 @@ class Deck {
      */
     deal() {
         // write your code here
-
+       return this.deck.pop();
     } //End of deal()
 
     /**
@@ -69,7 +78,7 @@ class Deck {
      */
     isEmpty() {
         // write your code here
-
+        return this.deck.length===0;
     } //End of isEmpty()
 
     /**
@@ -78,7 +87,7 @@ class Deck {
      */
     length() {
         // write your code here
-
+       return this.deck.length;
     } //End of length()
 
 } //End of Deck Class
