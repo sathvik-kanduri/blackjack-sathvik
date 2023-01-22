@@ -12,9 +12,12 @@
     // write your code here
     for(let suit in suits)
     {
+         i=1;
         for(let value in values)
         {
             packArr.push('${values[value]} of ${suits[suit]'});
+            packObj[`${values[value]} of ${suits[suit]}`]=i;
+               i++;
         }
     }
 
