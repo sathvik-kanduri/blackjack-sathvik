@@ -10,8 +10,8 @@ function buildCards(asArray=true){
     const packObj = {}
 
     // write your code here
-    for(let i in suits){
-        for(let j in values){
+    for(let i=0;i<suits.length;i++){
+        for(let j=0;j<values.length;j++){
            let str= values[j]+" of "+suits[i];
             packArr.push(str);
             packObj[str]=parseInt(j)+1;
