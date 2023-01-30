@@ -209,7 +209,7 @@ function stand() {
             type:'success',
             title:"congratulations !!!",
             message:"You won the game",
-            buttonText:"yayy !",
+            buttonText:"won",
             img:"success.svg"
             
         }).then(() => {
