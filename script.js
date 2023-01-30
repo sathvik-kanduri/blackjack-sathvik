@@ -275,7 +275,7 @@ function hit() {
             type: "warning",
             title: "Sorry...",
             message: "Max. Cards dealed",
-            buttonText: "OK",
+            buttonText: "lost :(",
             img:"warning.svg"
         })
     */
@@ -285,7 +285,7 @@ function hit() {
                 type:'error',
                 title:'busted',
                 message:'you lost the game',
-                buttonText:'ok',
+                buttonText: 'won :)',
                 img:'error.svg'
             }).then(() =>{location.reload()})
         }
