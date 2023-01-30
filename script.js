@@ -164,41 +164,22 @@ function initialDeal() {
         deck.shuffle();
     }
 
-    // Deal(Instantiate) 2 Dealer cards and 2 Player cards
 
     card1=new Card(deck.deal());
     card2=new Card(deck.deal());
     playerCard1=new Card(deck.deal());
     playerCard2=new Card(deck.deal());
-
-    // Open the board with 2 Dealer cards (one Dealer card is closed) and 2 Player cards (both open)
-
     card1.displayCard('card1',1);
     card2.displayCard('card2',0);
     playerCard1.displayCard('playerCard1',1);
     playerCard2.displayCard('playerCard2',1);
-
-    // Setting face card values to 10
-
     card1.value=card1.value>10?10:card1.value;
     card2.value=card2.value>10?10:card2.value;
     playerCard1.value=playerCard1.value>10?10:playerCard1.value;
     playerCard2.value=playerCard2.value>10?10:playerCard2.value;
 
 
-    // Getting player cards total - show an alert only if there is a Blackjack
-    /*
-    // Alert to show Blackjack
-        cuteAlert({
-            type: "success",
-            title: "Superb!!!",
-            message: "Blackjacked !!!",
-            buttonText: "Wohoo !!!",
-            img:"success.svg"
-        }).then(() => {
-            location.reload()  // Load a new game
-        })
-    */
+   
 
         playerTotal=playerCard1.value+playerCard2.value;
         if(playerTotal==21){
@@ -213,21 +194,16 @@ function initialDeal() {
             })
         }
 
-} //End of deal()
-
-/**
- * If the Player stands with his cards - the Dealer has to flip his closed card and determine who wins the game
- */
+} 
 function stand() {
-    // flip Dealer cards and compare
+    
 
     card2.flip();
     dealerTotal=card1.value+card2.value;
     
 
 
-    // Checking Dealer and Player score - to give the result using cuteAlerts (just like the alert in initialDeal function)
-
+   
     if(playerTotal>=dealerTotal){
         cuteAlert({
             type:'success',
