@@ -52,9 +52,9 @@ class Deck {
      */
     shuffle() {
         // write your code here
-        let j=this.deck.length;
-        for(let i=0;i<j;i++){
-            let suits=Math.floor(Math.random()*j)
+        let t=this.deck.length;
+        for(let i=0;i<t;i++){
+            let suits=Math.floor(Math.random()*t)
             let values=this.deck[i];
             this.deck[i]=this.deck[suits];
             this.deck[suits]=values;
