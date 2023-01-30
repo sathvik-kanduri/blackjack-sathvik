@@ -285,7 +285,7 @@ function hit() {
                 type:'error',
                 title:'busted',
                 message:'you lost the game',
-                buttonText: 'won :)',
+                buttonText: 'lost :(',
                 img:'error.svg'
             }).then(() =>{location.reload()})
         }
@@ -294,7 +294,7 @@ function hit() {
                 type:'success',
                 title:'superb',
                 message:'blackjacked',
-                buttonText:'wooh',
+                buttonText:'won :)',
                 img:'success.svg'
             }).then(() => {
                 location.reload()
